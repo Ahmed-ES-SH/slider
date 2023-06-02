@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+.imgs-container {
+    margin: 10px auto;
+    position: relative;
+    width: 1020px;
+}
+
+.imgs-container img {
+    width: 1020px;
+    position: absolute;
+        opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+}
+
+.imgs-container  .active {
+    opacity: 1;
+}
+
+.slide-number {
+    padding: 10px  20px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.slider-controls {
+    width: 1020px;
+    margin: -10px auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left: 12%;
+}
+
+.slider-controls .next,
+.slider-controls .prev {
+    padding: 5px 20px;
+    background-color: rgba(0, 150, 136);
+    cursor: pointer;
+}
+
+.bullets ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.slider-controls .bullets  li {
+    padding: 5px 8px;
+    background-color: #eee;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.548);
+}
+
+.slider-controls .bullets   .active {
+    background-color: rgba(0, 150, 136);
+}
+
+.slider-controls .prev.disabled,
+.slider-controls .next.disabled {
+  background-color: rgba(0, 150, 136, 0.5);
+  cursor: no-drop;
+}
